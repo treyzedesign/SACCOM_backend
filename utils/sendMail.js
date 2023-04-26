@@ -23,7 +23,7 @@ const sendmail = (obj)=>{
     const emailToken = jwt.sign({email:obj.email, firstName:obj.firstName}, process.env.ETOKEN_SECRET, {
         expiresIn: '1h'
     })
-    const url = 'http://localhost:4000/'
+    const url = process.env.BASE_URL
     let sender = transporter.sendMail({
         from : process.env.USER,
         to: obj.email,
