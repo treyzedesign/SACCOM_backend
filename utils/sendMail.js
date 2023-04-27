@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
-// const User = require("../model/User")
 const nodemailer = require("nodemailer")
 
 const sendmail = (obj)=>{
@@ -37,4 +36,4 @@ const sendmail = (obj)=>{
     
 
 }
-module.exports = {sendmail}
+module.exports = { sendmail }

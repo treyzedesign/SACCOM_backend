@@ -84,7 +84,8 @@ userRouter.post('/login', async(req,res)=>{
                         sameSite: true
                       })
                     res.status(200).json({
-                        message: "user Login successful"
+                        message: "user Login successful",
+                        data: accessToken
                     })
                 }
             }else{
@@ -156,7 +157,7 @@ userRouter.post('/verifyEmail', async(req,res)=>{
                     }
                 }).then(()=>{
                     res.status(200).json({
-                        massage: "user has been Verified"
+                        message: "user has been Verified"
                     })
                 })
             })

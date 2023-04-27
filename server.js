@@ -25,5 +25,4 @@ const startserver = async()=>{
         console.log(`server is listening on port ${PORT}`);
     })
 }
-// c4Gb5i$AFgMN@.L
 startserver()
