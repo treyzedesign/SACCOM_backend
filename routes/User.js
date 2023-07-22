@@ -173,4 +173,43 @@ userRouter.post('/verifyEmail', async(req,res)=>{
     }
 })
 
+// FORGOT PASSWORD
+
+userRouter.post('/forgot-Password', async(req,res)=>{
+    const {email} = req.body;
+    console.log(email);
+    // try {
+    //     if(req.body == null || req.body == undefined){
+    //         res.status(400).json({
+    //             message: 'Bad request'
+    //         })
+    //     }
+    //     const feedback = await User.findOne({email: email})
+        
+    //     if(feedback){
+    //         const url = process.env.BASE_URL
+    //         await transporter.sendMail({
+    //             from : process.env.USER,
+    //             to: email,
+    //             subject : "hello" + " " + "(" + feedback.firstName + ")" + " " + "(Change Of Password)",
+    //             html: `<p>Please click the link the below to change your password</p>
+    //                     <p>Click the link : <a href=${url + "change_password/" + feedback.id }> press Here</a> to proceed</p>`
+    //         }).then((feedback)=>{
+    //             res.send(feedback)
+    //         }).catch((fail)=>{
+    //             res.send(fail)
+    //         })
+            
+    //     }else{
+    //         res.status(404).json({
+    //             msg: "User not found"
+    //         })
+    //     }
+    // } catch (error) {
+    //     res.status(500).json({
+    //         message: error.message
+    //     })
+    // }
+})
+
 module.exports = userRouter
